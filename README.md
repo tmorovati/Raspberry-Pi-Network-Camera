@@ -22,34 +22,39 @@ Access to the local network for connecting from other devices
 Assemble your Raspberry Pi and connect the Camera Module.
 Install Raspbian OS on a microSD card and boot up your Raspberry Pi.
 Connect the Raspberry Pi to your local network, either through Wi-Fi or Ethernet.
--Capture Images:
+
+- Capture Images:
 
 Write a Python program to capture images continuously using the Camera Module.
--Modify Images:
+
+- Modify Images:
 
 Write a Python program to modify captured images as per your requirements. You can use libraries like OpenCV or the PiCamera library for this purpose.
 I used Pi-Camera, if you want to install it on your raspian use this command: 
 
-'''Sudo apt-get install python-picamera python3-picamera '''
+```Sudo apt-get install python-picamera python3-picamera ```
 
--Create a User Interface:
+- Create a User Interface:
 ![image](https://github.com/tmorovati/Raspberry-Pi-Network-Camera/assets/47552594/53a054b7-ef94-4d7a-b23c-0d75ba529bb5)
 
 I used motioneye, after installation, you can start it by following command on your terminal : 
-'''Sudo service motion start '''
+
+```Sudo service motion start ```
 
 to check the status of the service: 
-'''Sudo service motion status'''
+```Sudo service motion status```
 
 I enabled it, so that whenever the device gets plugged in the service starts to work, to do so use this command: 
-'''sudo systemctl enable motion '''
+```sudo systemctl enable motion ```
 
 
-FTP Image Transfer:
+- FTP Image Transfer:
 
 Set up an FTP (File Transfer Protocol) server on your Raspberry Pi. You can use software like vsftpd to create a simple FTP server.
 Modify your Python program to send the captured and modified images to the FTP server on your Raspberry Pi.
-Usage
+
+## Usage
+
 Start the Camera:
 
 Run your Python program that captures images and sends them to the FTP server.
@@ -63,3 +68,24 @@ Use the web interface to view the camera feed and potentially control the camera
 Image Storage:
 
 Images captured by the camera will be stored on your Raspberry Pi's FTP server. You can access these images via FTP from your local network.
+
+## Troubleshooting
+If you encounter issues, check your Raspberry Pi's network connection, ensure the FTP server is running, and review your Python programs for any errors.
+Make sure your firewall settings allow FTP traffic to your Raspberry Pi.
+
+## Acknowledgments
+This project was developed using Raspbian, Python, and open-source software.
+Special thanks to the Raspberry Pi community and the PiCamera library for making this project possible, and ToobaTech Company that provided me this opportunity to develop this device.
+
+## License
+This project is open-source and released under the MIT License.
+
+## Contact
+For questions or feedback, please contact Tahoura Morovati at t.morovati.99@gmail.com
+
+
+
+
+
+
+
